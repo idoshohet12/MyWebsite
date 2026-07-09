@@ -1,0 +1,129 @@
+/* הגדרות בסיס ופונט מיובא מ-Google Fonts */
+body {
+    font-family: 'Heebo', sans-serif;
+    background-color: #f8f9fa; 
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* עיצוב החלק העליון (Header) */
+.hero-section {
+    background-color: #2c3e50;
+    color: white;
+    padding: 60px 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* עיצוב התמונה עם אנימציה (Transition) במעבר עכבר */
+#profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+#profile-pic:hover {
+    transform: scale(1.08) rotate(3deg);
+}
+
+/* מפריד <hr> - חוק ה-CSS מהוראות התרגיל */
+hr {
+    border: dotted #829191 6px;
+    border-bottom: none;
+    width: 4%;
+    margin: 100px auto;
+}
+
+/* הגדרות אזורי התוכן */
+.content-section {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content-section h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+/* שימוש ב-Flexbox עבור עימוד רספונסיבי */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* עיצוב הכרטיסיות */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 25px;
+    width: 400px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    text-align: right;
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #e67e22;
+}
+
+/* התאמה לכרטיסייה בודדת שתיראה טוב במרכז */
+.single-card {
+    width: 500px;
+    max-width: 100%;
+}
+
+/* רשימת תחומי עניין עיצוב מתקדם */
+.hobbies-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.hobbies-list li {
+    background-color: white;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    border-right: 6px solid #e67e22;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* עיצוב חתימה תחתית */
+footer {
+    background-color: #2c3e50;
+    color: #bdc3c7;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+/* Media Query - רספונסיביות למסכים קטנים (מובייל) */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card, .single-card {
+        width: 85%;
+    }
+    
+    hr {
+        margin: 60px auto;
+    }
+}
